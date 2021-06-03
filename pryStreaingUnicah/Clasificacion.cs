@@ -46,7 +46,7 @@ namespace pryStreaingUnicah
             //Comprobacin de campos vacios.
             if (txtDescripcion.Text.Equals("") || txtEstado.Text.Equals(""))
             {
-                MessageBox.Show("Por favor ingresar descripcion");
+                MessageBox.Show("Por favor ingresar Todos los datos");
                 return;
             }
            
