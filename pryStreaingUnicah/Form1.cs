@@ -119,5 +119,29 @@ namespace pryStreaingUnicah
             //Destructor
             this.Dispose();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Estudios Ventana = new Estudios();
+            Ventana.Show();
+        }
+
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            Paises Ventana = new Paises();
+            Ventana.Show();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            Clasificacion Ventana = new Clasificacion();
+            Ventana.Show();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            CalidadCamisas Ventana = new CalidadCamisas();
+            Ventana.Show();
+        }
     }
 }
