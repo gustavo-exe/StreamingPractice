@@ -31,14 +31,14 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtPkpais = new System.Windows.Forms.TextBox();
+            this.txtFkpais = new System.Windows.Forms.TextBox();
             this.txtEstadoEstudio = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,7 @@
             this.btnEditar.TabIndex = 23;
             this.btnEditar.Text = "Nuevo";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnCancelar
             // 
@@ -60,6 +61,7 @@
             this.btnCancelar.TabIndex = 22;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAgregar
             // 
@@ -69,13 +71,14 @@
             this.btnAgregar.TabIndex = 21;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // txtEstado
+            // txtFecha
             // 
-            this.txtEstado.Location = new System.Drawing.Point(174, 47);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(114, 20);
-            this.txtEstado.TabIndex = 20;
+            this.txtFecha.Location = new System.Drawing.Point(174, 47);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(114, 20);
+            this.txtFecha.TabIndex = 20;
             // 
             // label2
             // 
@@ -95,12 +98,12 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Nombre del estudio";
             // 
-            // txtDescripcion
+            // txtNombre
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(17, 47);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(118, 20);
-            this.txtDescripcion.TabIndex = 17;
+            this.txtNombre.Location = new System.Drawing.Point(17, 47);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(118, 20);
+            this.txtNombre.TabIndex = 17;
             // 
             // dataGridView
             // 
@@ -109,15 +112,16 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Size = new System.Drawing.Size(454, 150);
             this.dataGridView.TabIndex = 16;
+            this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(334, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 24;
-            this.label3.Text = "Pk Pais";
+            this.label3.Text = "Fk Pais";
             // 
             // label4
             // 
@@ -128,12 +132,12 @@
             this.label4.TabIndex = 25;
             this.label4.Text = "Estado del estudio";
             // 
-            // txtPkpais
+            // txtFkpais
             // 
-            this.txtPkpais.Location = new System.Drawing.Point(337, 47);
-            this.txtPkpais.Name = "txtPkpais";
-            this.txtPkpais.Size = new System.Drawing.Size(100, 20);
-            this.txtPkpais.TabIndex = 26;
+            this.txtFkpais.Location = new System.Drawing.Point(337, 47);
+            this.txtFkpais.Name = "txtFkpais";
+            this.txtFkpais.Size = new System.Drawing.Size(100, 20);
+            this.txtFkpais.TabIndex = 26;
             // 
             // txtEstadoEstudio
             // 
@@ -148,19 +152,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(615, 383);
             this.Controls.Add(this.txtEstadoEstudio);
-            this.Controls.Add(this.txtPkpais);
+            this.Controls.Add(this.txtFkpais);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.txtEstado);
+            this.Controls.Add(this.txtFecha);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.dataGridView);
             this.Name = "Estudios";
             this.Text = "Estudios";
+            this.Load += new System.EventHandler(this.Estudios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -172,14 +177,14 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtPkpais;
+        private System.Windows.Forms.TextBox txtFkpais;
         private System.Windows.Forms.TextBox txtEstadoEstudio;
     }
 }

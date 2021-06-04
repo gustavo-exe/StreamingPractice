@@ -51,12 +51,13 @@ namespace pryStreaingUnicah
 
             if (editar)
             {
-
+                
                 var rowPais = entityStreaming.Paises.FirstOrDefault(x => x.IdPais == idPais);
-                rowPais.IdPais =Convert.ToByte (txtCodigo.Text);
+                rowPais.IdPais = Convert.ToByte (txtCodigo.Text);
                 rowPais.NombrePais = txtNombrePais.Text;
                 rowPais.EstadoPais = Convert.ToBoolean(txtEstadoPais.Text);
 
+                //MessageBox.Show(Convert.ToString(idPais) + Convert.ToString(rowPais.IdPais));
                 entityStreaming.SaveChanges();
             }
             else
