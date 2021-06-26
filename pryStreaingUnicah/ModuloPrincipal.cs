@@ -12,20 +12,17 @@ namespace pryStreaingUnicah
     using System;
     using System.Collections.Generic;
     
-    public partial class Estudios
+    public partial class ModuloPrincipal
     {
-        public Estudios()
+        public ModuloPrincipal()
         {
-            this.Peliculas = new HashSet<Peliculas>();
+            this.Modulos = new HashSet<Modulos>();
         }
     
-        public int IdEstudios { get; set; }
-        public string NombreEstudio { get; set; }
-        public System.DateTime FechaFundacion { get; set; }
-        public byte FKPais { get; set; }
-        public bool EstadoEstudio { get; set; }
+        public short IdModuloPrincipal { get; set; }
+        public string DescripcionModuloPrin { get; set; }
+        public bool EstadoModuloPrin { get; set; }
     
-        public virtual Paises Paises { get; set; }
-        public virtual ICollection<Peliculas> Peliculas { get; set; }
+        public virtual ICollection<Modulos> Modulos { get; set; }
     }
 }

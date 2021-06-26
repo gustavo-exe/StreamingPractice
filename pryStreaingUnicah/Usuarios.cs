@@ -12,20 +12,17 @@ namespace pryStreaingUnicah
     using System;
     using System.Collections.Generic;
     
-    public partial class Estudios
+    public partial class Usuarios
     {
-        public Estudios()
-        {
-            this.Peliculas = new HashSet<Peliculas>();
-        }
+        public long IdUsuario { get; set; }
+        public string Usuario { get; set; }
+        public string NombreCompleto { get; set; }
+        public System.DateTime FechaNacimeinto { get; set; }
+        public string CorreoElectronico { get; set; }
+        public short FKPerfil { get; set; }
+        public bool Estdo { get; set; }
+        public string Contrasenia { get; set; }
     
-        public int IdEstudios { get; set; }
-        public string NombreEstudio { get; set; }
-        public System.DateTime FechaFundacion { get; set; }
-        public byte FKPais { get; set; }
-        public bool EstadoEstudio { get; set; }
-    
-        public virtual Paises Paises { get; set; }
-        public virtual ICollection<Peliculas> Peliculas { get; set; }
+        public virtual Perfiles Perfiles { get; set; }
     }
 }

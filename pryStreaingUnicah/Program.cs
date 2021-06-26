@@ -16,7 +16,7 @@ namespace pryStreaingUnicah
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CalidadCamisas());
+            Application.Run(new Seguridad.Login());
         }
     }
 }
