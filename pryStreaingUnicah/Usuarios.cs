@@ -14,6 +14,11 @@ namespace pryStreaingUnicah
     
     public partial class Usuarios
     {
+        public Usuarios()
+        {
+            this.VentaPelicula = new HashSet<VentaPelicula>();
+        }
+    
         public long IdUsuario { get; set; }
         public string Usuario { get; set; }
         public string NombreCompleto { get; set; }
@@ -24,5 +29,6 @@ namespace pryStreaingUnicah
         public string Contrasenia { get; set; }
     
         public virtual Perfiles Perfiles { get; set; }
+        public virtual ICollection<VentaPelicula> VentaPelicula { get; set; }
     }
 }

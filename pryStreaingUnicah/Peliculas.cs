@@ -14,18 +14,27 @@ namespace pryStreaingUnicah
     
     public partial class Peliculas
     {
+        public Peliculas()
+        {
+            this.DevolucionDetalle = new HashSet<DevolucionDetalle>();
+            this.VentaDetallePelicula = new HashSet<VentaDetallePelicula>();
+        }
+    
         public long IdPelicula { get; set; }
         public string NombrePelicula { get; set; }
         public string NombreCorto { get; set; }
-        public Nullable<byte> FKIdTipoPelicula { get; set; }
-        public Nullable<byte> FKIdClasificacion { get; set; }
-        public Nullable<int> FKIdEstudio { get; set; }
-        public Nullable<bool> Estreno { get; set; }
-        public Nullable<decimal> PrecioVenta { get; set; }
-        public Nullable<bool> EstadoPelicula { get; set; }
+        public System.DateTime FechaLanzamiento { get; set; }
+        public byte FKIdTipoPelicula { get; set; }
+        public byte FKIdClasificacion { get; set; }
+        public int FKIdEstudio { get; set; }
+        public bool Estreno { get; set; }
+        public decimal PrecioVenta { get; set; }
+        public bool EstadoPelicula { get; set; }
     
         public virtual Clasificaciones Clasificaciones { get; set; }
+        public virtual ICollection<DevolucionDetalle> DevolucionDetalle { get; set; }
         public virtual Estudios Estudios { get; set; }
         public virtual TiposPeliculas TiposPeliculas { get; set; }
+        public virtual ICollection<VentaDetallePelicula> VentaDetallePelicula { get; set; }
     }
 }

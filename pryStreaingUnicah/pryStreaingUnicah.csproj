@@ -64,6 +64,12 @@
     <Compile Include="Clasificaciones.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="DevolucionDetalle.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DevolucionesPeliculas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Estudios.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -72,6 +78,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVentaPelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVentaPelicula.Designer.cs">
+      <DependentUpon>FormVentaPelicula.cs</DependentUpon>
     </Compile>
     <Compile Include="LINQTODATATABLE.cs" />
     <Compile Include="Menu.cs">
@@ -133,11 +145,23 @@
     <Compile Include="Usuarios.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="VentaDetallePelicula.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VentaPelicula.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CalidadCamisas.resx">
       <DependentUpon>CalidadCamisas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVentaPelicula.resx">
+      <DependentUpon>FormVentaPelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -190,7 +214,6 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

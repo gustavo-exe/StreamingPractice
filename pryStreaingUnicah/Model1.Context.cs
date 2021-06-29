@@ -26,14 +26,18 @@ namespace pryStreaingUnicah
         }
     
         public DbSet<Clasificaciones> Clasificaciones { get; set; }
+        public DbSet<DevolucionDetalle> DevolucionDetalle { get; set; }
+        public DbSet<DevolucionesPeliculas> DevolucionesPeliculas { get; set; }
         public DbSet<Estudios> Estudios { get; set; }
-        public DbSet<Paises> Paises { get; set; }
-        public DbSet<TiposPeliculas> TiposPeliculas { get; set; }
         public DbSet<ModuloPrincipal> ModuloPrincipal { get; set; }
         public DbSet<Modulos> Modulos { get; set; }
+        public DbSet<Paises> Paises { get; set; }
         public DbSet<Peliculas> Peliculas { get; set; }
         public DbSet<Perfiles> Perfiles { get; set; }
         public DbSet<PerfilModulo> PerfilModulo { get; set; }
+        public DbSet<TiposPeliculas> TiposPeliculas { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
+        public DbSet<VentaDetallePelicula> VentaDetallePelicula { get; set; }
+        public DbSet<VentaPelicula> VentaPelicula { get; set; }
     }
 }
