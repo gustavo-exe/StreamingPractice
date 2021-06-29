@@ -43,7 +43,7 @@ namespace pryStreaingUnicah.Seguridad
                 return;
             }
             else {
-                Menu formMenu = new Menu();
+                Menu formMenu = new Menu(tUsuario.IdUsuario);
                 this.Hide();
                 formMenu.Show();
             }

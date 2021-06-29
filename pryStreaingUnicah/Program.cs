@@ -16,7 +16,7 @@ namespace pryStreaingUnicah
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Seguridad.FormUsuario());
+            Application.Run(new Seguridad.Login());
         }
     }
 }
